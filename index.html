@@ -3,6 +3,7 @@
 
 
 <head>
+
     <meta charset="utf-8">
     <meta name="keywords" content="我の博客">
     <meta name="description" content="">
@@ -32,6 +33,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="/live2d-widget-master/autoload.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+     <!--自定加载动画-->
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
+
 
 
 <meta name="generator" content="Hexo 5.4.2">
@@ -45,6 +49,32 @@
 
 
 <body>
+
+    
+  <div id="loading-box">
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+      <div class="configure-border-1">
+        <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+        <div class="configure-core"></div>
+      </div>
+      <div class="loading-word">加载中...</div>
+    </div>
+  </div>
+  <!-- 页面加载动画 -->
+  <script>
+    $(document).ready(function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loading-box').classList.add("loaded")
+    })
+  </script>
+
+
+
+
    
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -317,8 +347,7 @@
 
 </header>
 
-    
-    <style>
+     <style>
     .carousel-control {
         width: 45px;
         height: 45px;
@@ -522,31 +551,29 @@
         
     });
 </script>
+ 
 
-    
-     
-        <!-- 雪花特效 -->
-        
-            <script type="text/javascript">
-                var windowWidth = $(window).width();
-                if (windowWidth > 768) {
-                    if(new Date().getHours()%2==0){
-                    document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
-                    }
-                }
-            </script>
-        
-    
-     
-    <main class="content">
+<!-- 雪花特效 -->
 
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 768) {
+    if (new Date().getHours() % 2 == 0) {
+      document.write(
+        '<script type="text/javascript" src="/js/snow.js"><\/script>'
+      );
+    }
+  }
+</script>
+
+
+<main class="content">
+  
+  <div id="indexCard" class="index-card">
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+           <div class="dream">
     
     <div class="title center-align">
         <i class="far fa-lightbulb"></i>&nbsp;&nbsp;逍遥游
@@ -558,23 +585,18 @@
         </div>
     </div>
 </div>
-
-                    
-
-                    
-
-                    
-                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+   
+          <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
 <div class="video-player">
     
     <div class="title center-align">
-        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;look 一眼
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;生日快乐颖颖子(づ￣3￣)づ╭❤～
     </div>
     
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s12">
             <div id="dplayer" class="dplayer-video"
-                     style="height: 400px;"></div>
+                    ></div>
         </div>
     </div>
 </div>
@@ -591,77 +613,133 @@
             preload: 'auto',
             volume: Number('0.7'),
             video: {
-                url: 'https://www.bilibili.com/video/BV1R4411W7sT?share_source=copy_web',
+                url: '//player.bilibili.com/player.html?aid=335960716&bvid=BV1oR4y1n7A8&cid=421104915&page=1',
                 pic: '',
                 thumbnails: ''
             }
         });
     });
 </script>
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
+  
+          <div id="recommend-sections" class="recommend">
+            
 
 
 
-                    </div>
-                    
-                </div>
-            </div>
+          </div>
+          
         </div>
+      </div>
     </div>
-    
+  </div>
+   
 
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/062516107.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                            
-                            <span class="card-title">Hello World</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                王均淼
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
+  <!-- 所有文章卡片 -->
+  <article id="articles" class="container articles">
+    <div class="row article-row">
+      
+      <div class="article col s12 m6 l4" data-aos="zoom-in">
+        <div class="card">
+          <a href="/2022/062913602.html">
+            <div class="card-image">
+               
+              <img
+                src="/medias/featureimages/9.jpg"
+                class="responsive-img"
+                alt="Markdown语法"
+              />
+              
+              <span class="card-title"> Markdown语法 </span>
             </div>
-            
-        </div>
-    </article>
+          </a>
 
+          <div class="card-content article-content">
+            <div class="summary block-with-text">
+               
+如下图使用paste image插件可以上网复制图片，注意是复制图片，再是复制链接
+一级标题快捷键ctrl+b，切换粗细字体快捷键ctrl+i，切换斜正字体由于使用插件所以可以直接ctrl + v 链接这是百度链接的使用
+二级标题$$这是 
+            </div>
+            <div class="publish-info">
+              <span class="publish-date">
+                <i class="far fa-clock fa-fw icon-date"></i>
+                2022-06-29
+              </span>
+              <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                  生活
+                </a>
+                
+                <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B/" class="post-category">
+                  搞事
+                </a>
+                 
+              </span>
+            </div>
+          </div>
+
+          
+          <div class="card-action article-tags">
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+              <span class="chip bg-color"> 博客 </span>
+            </a>
+            
+            <a href="/tags/Markdown/">
+              <span class="chip bg-color"> Markdown </span>
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="article col s12 m6 l4" data-aos="zoom-in">
+        <div class="card">
+          <a href="/2022/062516107.html">
+            <div class="card-image">
+               
+              <img
+                src="/medias/featureimages/12.jpg"
+                class="responsive-img"
+                alt="Hello World"
+              />
+              
+              <span class="card-title"> Hello World </span>
+            </div>
+          </a>
+
+          <div class="card-content article-content">
+            <div class="summary block-with-text">
+               Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex 
+            </div>
+            <div class="publish-info">
+              <span class="publish-date">
+                <i class="far fa-clock fa-fw icon-date"></i>
+                2022-06-25
+              </span>
+              <span class="publish-author">
+                
+                <i class="fas fa-user fa-fw"></i>
+                王均淼 
+              </span>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+      
+    </div>
+  </article>
 </main>
 
 
+
+    
 
 
     <footer class="page-footer bg-color">
@@ -711,22 +789,22 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2020-2022</span>
             
-            <span id="year">2019</span>
+            <span id="year">2020</span>
             <a href="/about" target="_blank">王均淼</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">73</span>&nbsp;字
+                class="white-color">443</span>&nbsp;字
             
             
             
             
             
-            
+            <!-- 
             <span id="busuanzi_container_site_pv">
                 |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
@@ -737,7 +815,7 @@
                 |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
                     class="white-color"></span>&nbsp;人
             </span>
-            
+             -->
             <br>
             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
             <script>

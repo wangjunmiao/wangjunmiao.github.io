@@ -241,15 +241,15 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #0ebaee 0%, #35dcde 100%);
+    background-image: linear-gradient(to right, #0fcbff 0%, #abe31e 100%);
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #da0622 !important;
 }
 
 .white-color {
-    color: #fff;
+    color: #000000;
 }
 
 .progress-bar {
@@ -1783,7 +1783,7 @@ thead {
     font-size: 12px;
     height: 30px;
     line-height: 30px;
-    color: #ffffff;
+    color: #55ff7f;
     color: rgba(0, 0, 0, 0.5);
 }
 
